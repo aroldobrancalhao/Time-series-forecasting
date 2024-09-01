@@ -1,20 +1,27 @@
 # Time-series-forecasting
 
-## Problema de negócio
+## 1.0 Contexto
 - Trata-se de uma empresa de venda de commodites que busca prever qual será a porcentagem da meta atigida em janeiro de 2024.
-- Meu objetivo como Cientista de Dados é realizar uma Análise Exploratória dos Dados e identificar oportunidades ocultas nos dados.
-- Além disso, será desenvolvido um Modelo de Machine Learning capaz de prever a meta para janeiro de 2024.
 
-## Prever a porcentagem da meta de vendas em janeiro de 2024, para Colômbia/Equador, Peru e Brasil
-## Temos 23 meses (fevereiro de 2022 a dezembro de 2023) com a porcentagem da meta para cada país
+## 2,0 Problema de Negócio
+- Prever a porcentagem da meta de vendas em janeiro de 2024, para Colômbia/Equador, Peru e Brasil.
 
-### Dados Disponíveis:
+## 3.0 Resumo
+- Meu objetivo como Cientista de Dados é realizar uma Análise Exploratória dos Dados (EDA) e identificar oportunidades ocultas nos dados.
+- Além disso, será desenvolvido um Modelo de Machine Learning capaz de prever a porcentagem da meta para janeiro de 2024.
 
+## 4.0 Descrição dos Dados
+
+### Temos 23 meses (fevereiro de 2022 a dezembro de 2023) com a porcentagem da meta para cada país
 - Month/Year - Mês e ano.
 - Value - Valor da meta atingida.
 - Country - Paises  
 
-## Foram desenvolvidos alguns modelos para fazer a previsão de Janeiro de 2024
+## 5.0 Solução
+
+Para a solução foi aplicada o método CRISP-DS, onde começamos com o acordo do negócio, descobrimos para coleta dos dados, limpeza dos dados, EDA (Análise Exploratória dos dados), modelagem, avaliação do modelo.
+
+Foram desenvolvidos alguns modelos para fazer a previsão de Janeiro de 2024:
 - Baseline
 - ARIMA
 - SARIMA
@@ -25,9 +32,9 @@
 
   ![image](https://github.com/user-attachments/assets/49c6059f-9802-4da8-925c-3a561967d5d5)
 
-  ### o modelo escolhido foiu o Prophet, segue os graficos da previsão para cada pais
+  ### O modelo escolhido foi o Prophet. Segue os graficos da previsão para cada pais:
 
-  - Colômibia - Ecuador
+  - Colômbia - Equador
     
   ![image](https://github.com/user-attachments/assets/9dc91349-1db8-429a-8a9a-c771c7a709b0)
 
@@ -38,8 +45,10 @@
   - Brasil
 
   ![image](https://github.com/user-attachments/assets/e97feab3-b880-4acb-8e59-795cdfe45adc)
+
+## 6.0 Considerações finais
   
-  ## Com poucos dados no total 23 meses para cada país, não temos uma boa base de dados, mas acredito que o modelo que melhor generalizou foi Prophet, está melhor que baseline, sendo assim as previsões que consideraria para janeiro de 2024 seriam
+Com poucos dados no total 23 meses para cada país, a base de dados não é ideal, mas acredito que o modelo que melhor generalizou foi o Prophet, superando o baseline. Sendo assim, as previsões que considero para janeiro de 2024 são:
 | Model   | Country            | Forecast | MAE       | MSE          | RMSE     |
 |---------|--------------------|----------|-----------|--------------|----------|
 | Prophet | Colombia/Ecuador   | 75.83%   | 3.363194  | 2.478807e+01 | 4.978762 |
@@ -53,6 +62,11 @@
 | Peru               |   acréscimo   de  7.69%   |
 | Brasil             |   acréscimo  de  12.34%   |
 
+- Colômbia/Equador: Houve um aumento significativo de 28.52% na meta atingida em relação a janeiro de 2023, indicando um desempenho substancialmente melhor ao longo do ano.
+- Peru: Apresenta um crescimento mais moderado, com um acréscimo de 7.69% em relação ao mesmo período do ano anterior.
+- Brasil: Registrou um crescimento de 12.34% em relação a janeiro de 2023, mostrando uma tendência de melhoria, embora menos acentuada do que a Colômbia/Equador.
+
+
 ## Tabela comparativa da previsão com Dezembro de 2023 para verificar a evolução sequencial
 | Country            | Relação a dezembro 2023 |
 |--------------------|-------------------------|
@@ -60,8 +74,14 @@
 | Peru               |  decréscimo  de -5.13%  |
 | Brasil             |  acréscimo   de  3.23%  |
 
-## Proximos passos
+- Colômbia/Equador e Brasil: Ambos os países mostram um crescimento em relação a dezembro de 2023, com acréscimos de 3.74% e 3.23%, respectivamente. Isso indica uma tendência positiva para janeiro de 2024.
+- Peru: Apresenta uma queda de -5.13% em relação a dezembro de 2023, sugerindo uma possível desaceleração nas vendas para janeiro de 2024.
 
-- 
+## 7.0 Proximos passos
+
+- Realizar novos ciclos afim de melhorar o modelo.
+- Colocar o modelo em produção.
+- Definir como será disponibilizado o acesso ao modelo pelo usuário.
+- Melhorar a base de dados.
 
 
